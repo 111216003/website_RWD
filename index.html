@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            /*background: linear-gradient(#FFEFD5, #FFB366);*/
+        }
+
+        /* Header - Block元素 */
+        .header {
+            display: block;
+            background-color: #127436;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Navigation - Inline-Block元素 */
+        .nav {
+            background-color: #2c3e50;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .nav-item {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        .nav-item a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            padding: 8px 5px;
+            transition: background-color 0.3s;
+        }
+
+        .nav-item a:hover {
+            background-color: #34495e;
+        }
+
+        /* Main Content - Block和Inline-Block混合 */
+        .main-content {
+            display: block;
+            padding: 20px;
+            display: flex;
+        }
+
+        .sidebar {
+            display: block;
+            width: 35%;
+            background-color: #ecf0f1;
+            padding: 15px;
+            margin-right: 20px;
+        }
+
+        .content {
+            display: block;
+            flex-grow: 1;
+        }
+
+        .content-card {
+            display: inline-block;
+            width: calc(50% - 10px);
+            margin: 10px 5px;
+            padding: 15px;
+            background-color: #4CAF50;
+            color: white;
+            vertical-align: top;
+        }
+
+        /* Footer - Block元素 */
+        .footer {
+            display: block;
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+
+        article {
+            padding: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+
+        /* 隱藏元素示範 */
+        .hidden-content {
+            display: none;
+        }
+
+        /* 響應式設計 */
+        @media screen and (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .sidebar, .content-card {
+                width: 100%;
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header - Block元素 -->
+    <header class="header">
+        <h1>111216003 涂家瀚</h1>
+    </header>
+
+    <!-- Navigation - Inline-Block元素 -->
+    <nav class="nav">
+        <div class="nav-item"><a href="#about">關於我</a></div>
+        <div class="nav-item"><a href="#experience">經歷</a></div>
+        <div class="nav-item"><a href="#skill">技能</a></div>
+        <div class="nav-item"><a href="#audio">音樂</a></div>        <div class="nav-item"><a href="#audio">音樂</a></div>
+        <div class="nav-item"><a href="#video">影片</a></div>
+        <div class="nav-item"><a href="#picture">圖片</a></div>
+        <div class="nav-item"><a href="#more">更多資訊</a></div>
+    </nav>
+
+    <!-- Main Content - Block和Inline-Block混合 -->
+    <main class="main-content">
+        <!-- Sidebar - Block元素 -->
+        <aside class="sidebar">
+            <blockquote>
+                <h3>Tips</h3>
+                <p>暫無內容</p>
+            </blockquote>
+        </aside>
+
+        <!-- Content Area - Inline-Block卡片 -->
+        <section class="content">
+            <div class="content-card" id="about"><h3>關於我</h3></div>
+            <article>
+                <section>
+                    <table cellspacing="10">
+                        <tr>
+                            <td><img src="IMG_7776.png" width="40%" alt="bighead"></td>
+                            <td>
+                                <strong><a href="https://www.ntue.edu.tw">國立台北教育大學</a></strong> 學生<br>
+                                (鄙人不才在下本人之玉照一枚)
+                            </td>
+                        </tr>
+                    </table>
+                    <p>
+                        大家好，我是資訊科學系的學生，對科技與程式設計充滿熱情。
+                        在學習過程中，我深入探索了各種程式語言與開發工具，並且對人工智慧、資料分析等領域有濃厚的興趣。
+                        除了課堂上的學習，我也積極參與實習與專題，將理論與實際應用結合，提升自己的實戰經驗。
+                        我相信，資訊科學不僅能解決當前的問題，還能開創未來的無限可能，期待與各位一起學習、成長。
+                    </p>
+                    <p>(以上內容由ChatGPT生成)</p>
+                </section>
+            </article>
+
+            <div class="content-card" id="experience"><h3>經歷</h3></div>
+            <article>
+                <section>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>時間</th>
+                                <th>所在地</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>2020-2023</td>
+                                <td>台北市某公立高中</td>
+                            </tr>
+                            <tr>
+                                <td>2023-</td>
+                                <td>國立台北教育大學</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </article>
+
+            <div class="content-card" id="skill"><h3>技能</h3></div>
+            <article>
+                <table>
+                    <tr>
+                        <td>C++</td>
+                        <td>⭐⭐⭐⭐</td>
+                    </tr>
+                    <tr>
+                        <td>睡覺</td>
+                        <td>⭐⭐⭐⭐⭐</td>
+                    </tr>
+                </table>
+            </article>
+
+            <div class="content-card" id="audio"><h3>音樂</h3></div>
+            <article>
+                <audio controls>
+                    <source src="CreatedByAIVA.mp3" type="audio/mp3">
+                </audio>
+            </article>
+
+            <div class="content-card" id="picture"><h3>圖片</h3></div>
+            <article>
+                <figure>
+                    <img src="CreatedByFirefly.jpg" alt="a motorcyle ride with a car">
+                    <figcaption>機車與汽車在公路上並馳</figcaption>
+                </figure>
+            </article>
+            
+            <div class="content-card" id="more"><h3>更多資訊</h3></div>
+            <article>
+                <details>
+                    <summary>查看提示</summary>
+                    <p>嘿嘿 其實沒有東西啦</p>
+                </details>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer - Block元素 -->
+    <footer class="footer">
+        上次更新：2024.12.23
+    </footer>
+
+    <!-- 隱藏元素 - Display: None -->
+    <div class="hidden-content">
+        這是一個隱藏的內容區塊
+    </div>
+</body>
+</html>
